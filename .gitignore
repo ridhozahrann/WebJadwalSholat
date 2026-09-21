@@ -1,18 +1,26 @@
-# Logs
+# Dependencies
+node_modules/
+
+# Production build artifacts
+dist/
+dist-ssr/
+
+# Local configuration & secrets
+opencode.json
+*.local
+
+# Internal documentation
+prd.md
+
+# Build cache & Logs
+tsconfig.tsbuildinfo
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
+# Editor & OS files
 .vscode/*
 !.vscode/extensions.json
 .idea
