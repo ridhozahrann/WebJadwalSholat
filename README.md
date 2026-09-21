@@ -1,104 +1,85 @@
 # Jadwal Sholat & Arah Kiblat
 
-A modern, fast, responsive, and offline-first Progressive Web App (PWA) for accurate Islamic prayer schedules and Qibla direction based on the user's location.
-
-Built with React 19, TypeScript, Tailwind CSS v4, and Vite.
+A fast, modern, responsive, and offline-first Progressive Web App (PWA) providing accurate Islamic prayer schedules and Qibla direction based on real-time location.
 
 ---
 
-## Features
+## Key Features
 
-- Automatic & Manual Location Detection: Detect current location via browser Geolocation or select from interactive Leaflet map / preset Indonesian cities.
-- Real-time Next Prayer Countdown: Auto-calculates upcoming prayer and live countdown timer (including auto-wrap to next day's Fajr/Subuh after Isha).
-- Accurate Qibla Compass: Device Orientation API integration with a +-10 deg Cone of Accuracy and fallback degree mode for desktop/devices without compass sensors.
-- Interactive Map Picker: Integrated Leaflet + OpenStreetMap location selector without requiring any paid API keys.
-- 7-Day Weekly Schedule & Share: View a 7-day prayer schedule table and share today's timings via WhatsApp or Web Share API.
-- Hijri Calendar & Islamic Events: View current Hijri date and important Islamic dates (Ramadhan, Idul Fitri, Idul Adha, Isra Miraj, etc.).
-- Multi-Location Favorites: Save and quickly switch between your favorite locations (Home, Office, Campus, etc.).
-- Offline-First PWA: Service Worker caching for instant loading and offline capability.
-- Modern Minimalist UI: Clean SVG icon system, dark/light/system theme switcher, and Emerald + Amber color palette.
+- **Automatic & Manual Geolocation**: Detect location via browser API, select from an interactive Leaflet map, or pick from popular Indonesian cities.
+- **Real-Time Countdown**: Live countdown timer to the next prayer, automatically transitioning to next day's Fajr (Subuh) after Isha.
+- **Qibla Compass**: Real-time compass with a +-10 deg accuracy cone using Device Orientation API, plus a static degree fallback for desktop devices.
+- **Interactive Map Location Picker**: OpenStreetMap and Leaflet.js map integration for precise location selection.
+- **7-Day Schedule & Social Sharing**: View weekly prayer timings and share daily schedules via WhatsApp or Web Share API.
+- **Hijri Calendar & Islamic Events**: Displays Hijri dates alongside important Islamic dates (Ramadhan, Idul Fitri, Idul Adha, Isra Miraj, etc.).
+- **Multi-Location Favorites**: Save multiple locations (Home, Office, etc.) and switch between them seamlessly.
+- **Offline PWA Support**: Service Worker caching for instant load times and offline accessibility.
+- **Minimalist Aesthetic**: Clean SVG icons, system/dark/light theme support, and Emerald + Amber palette.
 
 ---
 
 ## Tech Stack
 
-- Frontend: React 19, TypeScript, Vite
-- Styling: Tailwind CSS v4, Custom CSS Variables
-- Routing: React Router DOM v7
-- Maps & Geocoding: Leaflet.js, OpenStreetMap, Nominatim API
-- Prayer API: Aladhan API (Supports Kemenag RI, MWL, Umm al-Qura methods)
-- State & Storage: React Context + localStorage
+- **Framework**: React 19, TypeScript, Vite
+- **Styling**: Tailwind CSS v4, CSS Custom Properties
+- **Routing**: React Router DOM v7
+- **Mapping & Geocoding**: Leaflet.js, OpenStreetMap, Nominatim API
+- **Data Source**: Aladhan API (Kemenag RI, Muslim World League, Umm al-Qura)
+- **State Management**: React Context & LocalStorage API
 
 ---
 
-## Getting Started Locally
+## Getting Started
 
 ### Prerequisites
 
-- Node.js (v18.0 or higher)
+- Node.js `^18.0.0` or higher
 - npm or yarn
 
-### Installation & Run
+### Local Development
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/ridhozahrann/WebJadwalSholat.git
-cd WebJadwalSholat
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ridhozahrann/WebJadwalSholat.git
+   cd WebJadwalSholat
+   ```
 
-# 2. Install dependencies
-npm install
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-# 3. Start development server
-npm run dev
-```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-Open http://localhost:5180 in your browser.
+4. Open `http://localhost:5180` in your browser.
 
 ---
 
-## Build for Production
+## Build & Deployment
 
+### Production Build
+
+To build the static production assets:
 ```bash
-# Type check and build bundle
 npm run build
+```
 
-# Preview production build locally
+To preview the production build locally:
+```bash
 npm run preview
 ```
 
----
+### Deploy to Vercel
 
-## How to Push to GitHub
-
-Run these commands in your terminal to publish changes:
-
-```bash
-git add .
-git commit -m "docs: update README.md"
-git push origin main
-```
-
----
-
-## Deploying to Vercel
-
-### Option A: Via Vercel Dashboard (Recommended)
-
-1. Push your code to GitHub.
-2. Go to Vercel Dashboard (https://vercel.com/new).
-3. Select Import next to your `WebJadwalSholat` repository.
-4. Framework Preset will automatically detect Vite.
-5. Click Deploy. Vercel will build and provide a production HTTPS URL.
-
-### Option B: Via Vercel CLI
-
-```bash
-npm install -g vercel
-vercel
-```
+1. Import this repository into [Vercel](https://vercel.com/new).
+2. Vercel will automatically detect **Vite** as the framework.
+3. Click **Deploy**.
 
 ---
 
 ## License
 
-MIT License. Free to use and distribute.
+This project is open-source and available under the [MIT License](LICENSE).
